@@ -15,9 +15,12 @@ for index in range(len(normalizedLineList)):
         else:
             normalizedLineDictionary[normalizedLineList[index]] = [index]
 
+multilineLines = []
+
 for key,values in normalizedLineDictionary.items():
     if len(values) >= 2:
-        print(key,values)
+        multilineLines.append((key,values))
 
+print(multilineLines[:2])
 
 
